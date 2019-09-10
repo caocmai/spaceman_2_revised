@@ -45,17 +45,17 @@ def spaceman(secret_word):
     number_of_guesses = len(secret_word)
     all_letters_option = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 
                     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-                      't', 'u', 'v', 'w', 'x', 'y', 'z', 
-                      '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+                      't', 'u', 'v', 'w', 'x', 'y', 'z']
     user_guesses = [] # This is a list of correct guesses
 
-    print("Welcome to spaceman".upper())
+    print("\nWelcome to spaceman".upper())
     print(f'There are {number_of_guesses} letters in the secret word. You have {number_of_guesses} incorrect guesses'.upper())
     print("The secret word:" + ''.join(get_guessed_word(secret_word, user_guesses)))
 
     while number_of_guesses > 0:
         print("===============================================================")
         print("You have " + str(number_of_guesses) + " guesse(s) left")
+        
         user_guess = input("Enter a guess: ")
 
         if len(user_guess) != 1:
@@ -88,7 +88,7 @@ def spaceman(secret_word):
             print("Letters left to guess: " + all_letters_updated)
 
         if number_of_guesses == 0:
-            print("You are out of guesses. You lose".upper())
+            print("Game Over. You are out of guesses. You lose".upper())
             print("The secret word was: ".upper() + secret_word)
             print("===============================================================")
             break
