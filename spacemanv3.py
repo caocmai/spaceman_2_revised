@@ -23,7 +23,7 @@ def is_word_guessed(secret_word, letters_guessed):
 #             return True
 #     return False # Why here and not indented, when indent doesn't work
 
-### This does work!!
+### Returns True if guess is found in secret word, and False otherwise
 def is_guess_in_word(guess, secret_word):
     if secret_word.find(guess) != -1:
         return True
@@ -107,3 +107,21 @@ while to_play == 'y':
     spaceman(load_word())
     # spaceman('apple') # Use this instance to just test out the program
     to_play = input("Type 'y' to play again ")
+
+
+# # To test functions
+# def test_is_word_guessed():
+#     assert is_word_guessed('apple' 'apple') == True
+#     assert is_word_guessed('apple' 'apply') == False
+
+
+# def test_is_guess_in_word():
+#     assert is_guess_in_word('p', 'apple') == True
+#     assert is_guess_in_word('s', 'apple') == False
+
+
+# def test_get_guessed_word():
+#     assert get_guessed_word('apple', 'pple') == '_pple'
+
+# if __name__ == "__main__":
+#     test_is_word_guessed()
