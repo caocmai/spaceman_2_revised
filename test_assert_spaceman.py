@@ -27,10 +27,7 @@ def get_guessed_word(secret_word, letters_guessed):
 def test_is_word_guessed():
     assert is_word_guessed('apple', 'apple') == True
     assert is_word_guessed('apple', 'apply') == False
-    # ?Why does this produce an error
     assert type(is_word_guessed('apple', 'apple')) is bool
-    assert "test" not in is_word_guessed('apple', 'apple')
-
 
 def test_is_guess_in_word():
     assert is_guess_in_word('p', 'apple') == True
